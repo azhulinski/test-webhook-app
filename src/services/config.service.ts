@@ -31,6 +31,12 @@ class ConfigService {
       database: this.getValue('POSTGRES_DATABASE'),
       entities: [GoogleSheets],
       synchronize: true,
+      ssl: true,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      }
     };
   }
 

@@ -7,20 +7,13 @@ import { SheetsService } from './services/sheets.service';
 import { SheetController } from './controllers/sheets.controller';
 import { SheetsGateways } from './sheet/sheets.gateways';
 import { SheetConnectService } from './services/sheet.connect.service';
+import { configService } from './services/config.service';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([GoogleSheets]),
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'idalko',
-      password: 'idalko',
-      database: 'jcloudnode',
-      entities: [GoogleSheets],
-      synchronize: true,
-    }),
+    TypeOrmModule.forRoot(configService.getTypeOrmConfig(),
+    ),
   ],
   controllers: [WebhookController, SheetController],
   providers: [GoogleSheetsService, SheetsService, SheetConnectService, SheetsGateways],
