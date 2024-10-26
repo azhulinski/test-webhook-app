@@ -1,6 +1,6 @@
 import { Body, Controller, HttpCode, HttpStatus, Logger, Post } from '@nestjs/common';
 import { GoogleSheetsService } from '../services/google.sheets.service';
-import { GoogleSheets } from '../google.sheets.entity';
+import { GoogleSheets } from '../entities/google.sheets.entity';
 import { Logging } from '../decorators/logging.decorator';
 import { ApiBody, ApiOperation, ApiResponse } from '@nestjs/swagger';
 

@@ -1,5 +1,6 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { GoogleSheets } from '../google.sheets.entity';
+import { GoogleSheets } from '../entities/google.sheets.entity';
+import { Subscriber } from '../entities/subscriber.entity';
 
 require('dotenv').config();
 
@@ -29,7 +30,7 @@ class ConfigService {
       username: this.getValue('POSTGRES_USER'),
       password: this.getValue('POSTGRES_PASSWORD'),
       database: this.getValue('POSTGRES_DATABASE'),
-      entities: [GoogleSheets],
+      entities: [GoogleSheets, Subscriber],
       synchronize: true,
       ssl: true,
       extra: {

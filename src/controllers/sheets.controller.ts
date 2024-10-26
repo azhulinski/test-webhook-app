@@ -2,7 +2,7 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { SheetsService } from '../services/sheets.service';
 import { Logging } from '../decorators/logging.decorator';
 import { ApiOperation, ApiParam, ApiResponse } from '@nestjs/swagger';
-import { GoogleSheets } from '../google.sheets.entity';
+import { GoogleSheets } from '../entities/google.sheets.entity';
 
 @Controller('sheets')
 export class SheetController {

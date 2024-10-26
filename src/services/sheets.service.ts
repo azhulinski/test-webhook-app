@@ -1,5 +1,5 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { GoogleSheets } from '../google.sheets.entity';
+import { GoogleSheets } from '../entities/google.sheets.entity';
 import { Repository } from 'typeorm';
 import {Logging} from '../decorators/logging.decorator';
 

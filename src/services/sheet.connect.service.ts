@@ -11,7 +11,7 @@ export class SheetConnectService implements OnModuleInit {
 
   constructor() {
     this.auth = new google.auth.GoogleAuth({
-        keyFile: '/Users/zhulinski/IdeaProjects/test-webhook-app/webhook-technical-assignment-cd99c8ab4874.json',
+        keyFile: '/Users/zhulinski/IdeaProjects/test-webhook-app/webhook-technical-task-token.json',
         scopes: ['https://www.googleapis.com/auth/drive.file',
           'https://www.googleapis.com/auth/userinfo.email',
         ],
@@ -46,7 +46,7 @@ export class SheetConnectService implements OnModuleInit {
 
   async fetchStartPageToken() {
     const auth = new google.auth.GoogleAuth({
-      keyFile: '/Users/zhulinski/IdeaProjects/test-webhook-app/webhook-technical-assignment-cd99c8ab4874.json',
+      keyFile: '/Users/zhulinski/IdeaProjects/test-webhook-app/webhook-technical-task-token.json',
       scopes: ['https://www.googleapis.com/auth/drive'],
     });
     const service = google.drive({ version: 'v3', auth });
