@@ -22,7 +22,7 @@ export class GoogleSheetsService {
       try {
         this.sendMails();
       } catch (error) {
-        console.log(error);
+        this.logger.error(error);
       }
     }
     this.gateWay.handleMessage(JSON.stringify(sheet));
