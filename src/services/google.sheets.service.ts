@@ -54,6 +54,8 @@ export class GoogleSheetsService {
       to: recipients,
       subject: 'Google Sheet subscription',
       text: JSON.stringify(body),
+    }).then(() => {
+      this.logger.log('email with last 10 row has been successfully sent to subscribers');
     });
   }
 }

@@ -10,9 +10,7 @@ async function bootstrap() {
     .setDescription('')
     .setVersion('1.0')
     .addServer('http://localhost:3000/', 'Local environment')
-    .addServer('https://33147734ebd7.ngrok.app', 'Staging')
-    // .addServer('https://production.yourapi.com/', 'Production')
-    // .addTag('Your API Tag')
+    .addServer('https://test-webhook-app.onrender.com', 'Staging')
     .build();
 
   const document = SwaggerModule.createDocument(app, options);
