@@ -19,7 +19,8 @@ import { Subscriber } from './entities/subscriber.entity';
     ),
   ],
   controllers: [WebhookController, SheetController, SubscribersController],
-  providers: [GoogleSheetsService, SheetsService, SheetConnectService, SubscribersService, SheetsGateways],
+  providers: [GoogleSheetsService, SheetsService, SubscribersService, SheetsGateways],
+  // providers: [GoogleSheetsService, SheetsService, SheetConnectService, SubscribersService, SheetsGateways],
 })
 export class AppModule {
 }
